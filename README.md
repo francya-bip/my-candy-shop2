@@ -1,1 +1,1 @@
-# my-candy-shop2
+# my-cakes-shop
