@@ -7,6 +7,27 @@
     <title>Perfecto</title>
 </head>
 <body>
+    <!-- Навигационное меню (якоря) -->
+<nav class="main-nav">
+    <div class="nav-container">
+        <a href="#home" class="nav-logo">Perfecto</a>
+        <ul class="nav-menu">
+            <li><a href="#catalog" class="nav-link">Каталог</a></li>
+            <li><a href="#reviews" class="nav-link">Отзывы</a></li>
+            <li><a href="#contacts" class="nav-link">Контакты</a></li>
+            <li><a href="#blog" class="nav-link">Блог</a></li>   
+        </ul>
+    </div>
+</nav>
+
+<!-- Блок акции -->
+<div class="promo-banner" id="promo">
+    <div class="promo-content">
+        <span class="promo-text">🎉 Скидка 20% на все капкейки!</span>
+        <span class="promo-timer" id="timer">-- дн -- ч -- мин -- сек</span>
+    </div>
+</div>
+
     <div>
         <h1>Кондитерская Perfecto</h1>
         <div class="cart-icon">
@@ -32,8 +53,85 @@
             <button class="filter-btn" data-filter="cupcake">Печенье</button>
         </div>
 
+        <!-- Блок преимуществ -->
+<div class="features-section">
+    <h2 class="section-title">Почему выбирают нас?</h2>
+    <div class="features-container">
+        <div class="feature-card">
+            <div class="feature-icon">🎂</div>
+            <h3 class="feature-title">Натуральные ингредиенты</h3>
+            <p class="feature-desc">Используем только фермерские продукты: масло, яйца, сливки и никаких заменителей.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👩‍🍳</div>
+            <h3 class="feature-title">Авторские рецепты</h3>
+            <p class="feature-desc">Каждое изделие — уникальный рецепт, разработанный нашими шеф-кондитерами специально для вас.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚚</div>
+            <h3 class="feature-title">Бесплатная доставка</h3>
+            <p class="feature-desc">При заказе от 1500 ₽ доставим десерты по городу совершенно бесплатно.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3 class="feature-title">Свежая выпечка</h3>
+            <p class="feature-desc">Готовим только под заказ, поэтому ваши десерты всегда будут свежайшими.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Конструктор торта -->
+<div class="constructor-section">
+    <h2 class="section-title">Собери свой торт</h2>
+    <div class="constructor-container">
+        <div class="constructor-options">
+            <div class="constructor-group">
+                <label>Корж:</label>
+                <select id="crust">
+                    <option value="500">Бисквитный (+500 ₽)</option>
+                    <option value="600">Шоколадный (+600 ₽)</option>
+                    <option value="700">Медовик (+700 ₽)</option>
+                </select>
+            </div>
+            <div class="constructor-group">
+                <label>Начинка:</label>
+                <select id="filling">
+                    <option value="300">Клубника (+300 ₽)</option>
+                    <option value="400">Карамель (+400 ₽)</option>
+                    <option value="500">Сникерс (+500 ₽)</option>
+                </select>
+            </div>
+            <div class="constructor-group">
+                <label>Размер (кг):</label>
+                <select id="size">
+                    <option value="1">1 кг (+1000 ₽)</option>
+                    <option value="2">2 кг (+1800 ₽)</option>
+                    <option value="3">3 кг (+2500 ₽)</option>
+                </select>
+            </div>
+            <div class="constructor-group">
+                <label>Декор:</label>
+                <select id="decor">
+                    <option value="200">Ягоды (+200 ₽)</option>
+                    <option value="300">Сахарные цветы (+300 ₽)</option>
+                    <option value="0">Без декора (0 ₽)</option>
+                </select>
+            </div>
+            <div class="constructor-price">
+                Итоговая цена: <span id="constructor-total">0</span> ₽
+            </div>
+            <button id="add-constructor-to-cart" class="product-btn">Добавить в корзину</button>
+        </div>
+        <div class="constructor-preview">
+            <img src="cake2-Photoroom.png" alt="Пример торта" class="constructor-img">
+        </div>
+    </div>
+</div>
+
+
+
         <!-- Контейнер карточек (исправлен класс) -->
-        <div class="products-container">
+        <div id="catalog" class="products-container">
             <!-- Торт "Нежность" - Хит -->
             <div class="product-card hit" data-category="cake">
                 <div class="hit-badge">🔥 Хит</div>
@@ -90,8 +188,53 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- Блок "О нас" -->
+<div class="about-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2 class="section-title">Немного о нас</h2>
+            <p>«Perfecto» — это семейная кондитерская, где мы с любовью создаём десерты, которые дарят радость. Мы верим, что настоящий вкус рождается только из натуральных продуктов и вдохновения.</p>
+            <p>Каждое наше изделие — это маленькое произведение искусства, которое мы готовим специально для вас. Попробуйте наши десерты и убедитесь сами!</p>
+        </div>
+        <div class="about-image">
+            <img src="cakeshop.jpg" alt="Наша кондитерская" class="about-img">
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- Блог / статьи -->
+<div class="blog-section" id="blog">
+    <h2 class="section-title">Полезные статьи</h2>
+    <div class="blog-container">
+        <div class="blog-card">
+            <img src="blog1.jpg" alt="Как выбрать торт" class="blog-img">
+            <h3>Как выбрать идеальный торт?</h3>
+            <p>Советы по начинке, весу и дизайну для любого праздника.</p>
+            <a href="#" class="blog-link">Читать →</a>
+        </div>
+        <div class="blog-card">
+            <img src="blog2.jpg" alt="Секреты макарунов" class="blog-img">
+            <h3>Почему макаруны такие дорогие?</h3>
+            <p>Разбираем мифы и рассказываем о настоящем производстве.</p>
+            <a href="#" class="blog-link">Читать →</a>
+        </div>
+        <div class="blog-card">
+            <img src="blog3.jpg" alt="Капкейки на заказ" class="blog-img">
+            <h3>Капкейки: оформление и вкусы</h3>
+            <p>Тренды 2025 года и самые популярные начинки.</p>
+            <a href="#" class="blog-link">Читать →</a>
+        </div>
+    </div>
+</div>
+
+
+
     <!-- Блок отзывов -->
-<div class="reviews-section">
+<div id="reviews" class="reviews-section">
     <h2 class="section-title">Нас любят клиенты</h2>
     <div class="reviews-container">
         <div class="review-card">
@@ -114,6 +257,64 @@
         </div>
     </div>
 </div>
+
+
+
+<!-- Блок контактов -->
+<div id="contacts" class="contacts-section">
+    <h2 class="section-title">Наши контакты</h2>
+    <div class="contacts-container">
+        <div class="contacts-info">
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <h3>Адрес</h3>
+                    <p>г. Москва, ул. Кондитерская, д. 15</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <h3>Телефон</h3>
+                    <p>+7 (495) 123-45-67</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <h3>Email</h3>
+                    <p>info@perfecto-candy.ru</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🕒</div>
+                <div>
+                    <h3>Режим работы</h3>
+                    <p>Ежедневно: 09:00 — 21:00</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-map">
+            <!-- Яндекс.Карта (пример) -->
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b3b&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Социальные сети и Telegram -->
+<div class="social-section">
+    <h3>Мы в соцсетях</h3>
+    <div class="social-links">
+        <a href="https://instagram.com/perfecto" target="_blank" class="social-icon instagram">📷 Instagram</a>
+        <a href="https://vk.com/perfecto" target="_blank" class="social-icon vk">📱 VK</a>
+        <a href="https://t.me/perfecto_bot" target="_blank" class="social-icon telegram">✈️ Telegram</a>
+    </div>
+    <div class="telegram-btn-container">
+        <a href="https://t.me/perfecto_support" class="telegram-connect-btn">💬 Связаться с нами в Telegram</a>
+    </div>
+</div>
+
 
 <!-- Форма заявки -->
 <div class="callback-form">
@@ -160,6 +361,8 @@
             }
             saveCart();
             updateCartDisplay();
+
+
             alert(`Товар добавлен в корзину!`);
         }
 
@@ -308,6 +511,93 @@ if (form) {
             }
         });
         console.log('Обработчики кнопок добавлены, всего карточек:', cards.length);
+    });
+</script>
+
+<script>
+    // 1. Таймер акции (до окончания через 3 дня)
+    function startTimer() {
+        const endTime = new Date();
+        endTime.setDate(endTime.getDate() + 3); // акция идёт 3 дня
+        endTime.setHours(23, 59, 59, 999);
+        function update() {
+            const now = new Date();
+            const diff = endTime - now;
+            if (diff <= 0) {
+                document.getElementById('timer').innerText = "Акция завершена!";
+                return;
+            }
+            const days = Math.floor(diff / (1000*60*60*24));
+            const hours = Math.floor((diff / (1000*60*60)) % 24);
+            const mins = Math.floor((diff / (1000*60)) % 60);
+            const secs = Math.floor((diff / 1000) % 60);
+            document.getElementById('timer').innerText = `${days}д ${hours}ч ${mins}м ${secs}с`;
+        }
+        update();
+        setInterval(update, 1000);
+    }
+    startTimer();
+
+    // 2. Конструктор торта: расчёт цены
+    function updateConstructorPrice() {
+        const crust = parseInt(document.getElementById('crust').value);
+        const filling = parseInt(document.getElementById('filling').value);
+        const sizeMult = parseFloat(document.getElementById('size').value);
+        const decor = parseInt(document.getElementById('decor').value);
+        // базовая цена за кг 1000, умножаем на размер
+        let base = 1000 * sizeMult;
+        let total = base + crust + filling + decor;
+        document.getElementById('constructor-total').innerText = total;
+    }
+    document.getElementById('crust').addEventListener('change', updateConstructorPrice);
+    document.getElementById('filling').addEventListener('change', updateConstructorPrice);
+    document.getElementById('size').addEventListener('change', updateConstructorPrice);
+    document.getElementById('decor').addEventListener('change', updateConstructorPrice);
+    updateConstructorPrice();
+
+    // Добавление конструктора в корзину (расширяем массив товаров)
+    document.getElementById('add-constructor-to-cart').addEventListener('click', () => {
+        const crustSel = document.getElementById('crust').selectedOptions[0].text;
+        const fillingSel = document.getElementById('filling').selectedOptions[0].text;
+        const sizeVal = document.getElementById('size').value;
+        const decorSel = document.getElementById('decor').selectedOptions[0].text;
+        const total = document.getElementById('constructor-total').innerText;
+        const productId = `custom_${Date.now()}`;
+        // Добавляем кастомный товар в корзину (расширяем объект products динамически)
+        window.customProducts = window.customProducts || {};
+        window.customProducts[productId] = { name: `Торт на заказ (${crustSel}, ${fillingSel}, ${sizeVal}кг, ${decorSel})`, price: parseInt(total) };
+        // Функция addToCart из основного кода ожидает id и массив products. Но она работает только с числовыми id. Переопределим для конструктора.
+        // Проще добавить в корзину через существующую логику, но нужно расширить addToCart
+        // Создадим временную функцию push
+        if (typeof addToCart === 'function') {
+            // Но addToCart ожидает число. Вместо этого вызовем внутренние функции корзины
+            // Обойдём систему: напрямую работать с localStorage
+            let cart = JSON.parse(localStorage.getItem('cakeCart') || '[]');
+            cart.push({ id: productId, quantity: 1 });
+            localStorage.setItem('cakeCart', JSON.stringify(cart));
+            // Обновить интерфейс
+            if (typeof updateCartDisplay === 'function') updateCartDisplay();
+            else location.reload();
+            alert(`Добавлен торт на заказ на сумму ${total} ₽`);
+        } else {
+            alert('Корзина не инициализирована, но товар сохранён в консоли');
+            console.log('Торт конструктора:', { productId, name: window.customProducts[productId].name, price: total });
+        }
+    });
+
+    // 3. Плавная прокрутка к якорям
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1); // убираем #
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                // если нет элемента с таким id, ищем по классу или просто ничего не делаем
+                console.warn('Элемент не найден:', targetId);
+            }
+        });
     });
 </script>
 
